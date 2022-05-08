@@ -1,0 +1,968 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+label {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeFromLeft {
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideTopIn {
+    to {
+        top: 15%;
+        opacity: 100%;
+    }
+}
+
+@keyframes lineDown {
+    0% {
+        transform: scale(1, 0);
+        transform-origin: top center;
+    }
+
+    25% {
+        transform: scale(1, 1);
+        transform-origin: top center;
+    }
+
+    75% {
+        transform: scale(1, 1);
+        transform-origin: top center;
+    }
+
+    76% {
+        transform: scale(1, 1);
+        transform-origin: bottom center;
+    }
+
+    100% {
+        transform: scale(1, 0);
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes arrowDown {
+    0% {
+        bottom: 25px
+    }
+
+    30% {
+        bottom: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes scaleRight {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 320px) {
+
+    .lj-page-wrapper,
+    .lj-preloader {
+        width: 100%;
+        height: 100vh;
+        display: table;
+        background-color: #1C1C1C;
+        border: 30px solid #000;
+    }
+
+    .lj-preloader {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .lj-preloader-inner {
+        margin-top: -45px;
+    }
+
+    .lj-overlay {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: rgba(44, 203, 105, 0.95);
+    }
+
+    .lj-modal {
+        width: 800px;
+        display: none;
+        padding: 30px;
+        border-radius: 0 30px 30px 30px;
+        position: fixed;
+        top: -100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 1200;
+        opacity: 0;
+    }
+
+    .lj-modal-header,
+    .lj-modal-body,
+    .lj-form {
+        width: 100%;
+        display: table;
+        position: relative;
+    }
+
+    .lj-close-modal {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        color: #2ccb69;
+        text-align: center;
+        line-height: center;
+        cursor: pointer;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border: none;
+        background-color: #3a3a3a;
+    }
+
+    .lj-form label {
+        margin-bottom: 10px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .lj-field,
+    .lj-textarea {
+        width: 100%;
+        background-color: #4d4c4c;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-indent: 15px;
+    }
+
+    .lj-field {
+        height: 45px;
+    }
+
+    .lj-topbar {
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 900;
+    }
+
+    .lj-logo {
+        width: 74px;
+        height: 110px;
+        float: left;
+        margin-left: 60px;
+        background-color: #2ccb69;
+        border-radius: 0 0 37px 0;
+        ;
+    }
+
+    .lj-logo img {
+        width: 46px;
+        height: 31px;
+        display: block;
+        margin: 55px auto 0;
+    }
+
+    .lj-menu {
+        display: none;
+    }
+
+    .lj-btn-contact {
+        width: 45px;
+        height: 45px;
+        display: block;
+        background-color: #2ccb69;
+        background-image: url('../images/icon-contact-close.svg');
+        background-repeat: no-repeat;
+        position: fixed;
+        bottom: 45px;
+        right: 45px;
+        border-radius: 50px;
+        z-index: 200;
+        transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
+        /* Mostra no marcador do mouse que o ícone é clicável */
+    }
+
+    .lj-contact-info {
+        width: 245px;
+        height: 165px;
+        display: none;
+        padding: 25px;
+        position: fixed;
+        bottom: 115px;
+        right: 65px;
+        z-index: 200;
+    }
+
+    .lj-contact-info p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .lj-contact-info-inner {
+        display: table;
+        width: 100%;
+        float: right;
+    }
+
+    .lj-contact-info-inner p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .lj-social-links {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        left: -12px;
+        margin-top: 7px;
+    }
+
+    .lj-social-links-circle {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .lj-social,
+    .lj-social-links-circle .lj-social {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+    }
+
+    .lj-social-links-circle .lj-social {
+        border-radius: 50%;
+        text-align: center;
+        font-size: 35px;
+        transition: all 0.2s ease-out;
+    }
+
+    .lj-social-links-circle .lj-social:hover {
+        background-color: #000;
+    }
+
+    .lj-social-links-circle .lj-social:hover ion-icon {
+        color: #2ccb69;
+    }
+
+    .lj-social>img {
+        width: 20px;
+        height: auto;
+        display: block;
+        margin: 13px auto 0;
+    }
+
+    .lj-corner {
+        width: 25px;
+        height: 25px;
+        display: block;
+        float: right;
+        display: relative;
+    }
+
+    .lj-corner:after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        bottom: -23px;
+        right: 0;
+        background: transparent url('../images/corner.svg') no-repeat;
+    }
+
+    /* CSS - HOME */
+
+    .lj-display-text {
+        margin-top: 10%;
+    }
+
+    #lj-home-presentation {
+        background-image: url("../images/joao-lemon-designer-home.png");
+        background-repeat: no-repeat;
+        background-position: 50% bottom;
+        position: relative;
+    }
+
+    .lj-scrow-down {
+        width: 70px;
+        height: 105px;
+        border-radius: 35px 35px 0 0;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 100;
+    }
+
+    .lj-arrow-down {
+        width: 100%;
+        height: 75px;
+        display: table;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .lj-arrow-down img {
+        width: 16px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        animation: arrowDown 1.5s linear 1.5s infinite;
+    }
+
+    .lj-arrow-down:before {
+        content: "";
+        width: 2px;
+        height: 45px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #000;
+        animation: lineDown 1.5s infinite;
+    }
+
+    /* CSS - PORTFOLIO HOME */
+
+    .lj-portfolio-navigator {
+        width: 145px;
+        height: 400px;
+        display: table;
+        position: absolute;
+        left: 15px;
+        top: 26vh;
+    }
+
+    .lj-navigator-counter {
+        width: 100%;
+        height: 90px;
+        display: block;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .lj-navigator-counter:before {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 100%;
+        background-color: #1C1C1C;
+        position: absolute;
+        top: 3px;
+        left: 0;
+    }
+
+    .lj-navigator-counter span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 120px;
+        line-height: 90px;
+        font-weight: 600;
+    }
+
+    .lj-item-navigator {
+        width: 100%;
+        display: table;
+    }
+
+    .lj-item-navigator a {
+        width: 20px;
+        height: 1px;
+        display: block;
+        margin: 0 0 60px 35px;
+        background-color: #4d4c4c;
+    }
+
+    .lj-item-navigator a.lj-item-active {
+        background-color: #2ccb69;
+    }
+
+    .lj-item-navigator a:last-child {
+        margin-bottom: 30px;
+    }
+
+    .lj-items-next-prev {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3a3a3a;
+        border-radius: 23px;
+    }
+
+    .lj-items-next-prev>div {
+        height: 45px;
+    }
+
+    .lj-items-counter {
+        font-family: 'Open Sans', sans-serif;
+        color: #5c5c5c;
+        line-height: 45px;
+        font-weight: 400;
+    }
+
+    .lj-item-prev,
+    .lj-item-next {
+        width: 45px;
+        color: #2ccb69;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .lj-items-counter span:nth-child(1) {
+        color: #fff;
+    }
+
+    .lj-slider-container {
+        display: block;
+        overflow: hidden;
+    }
+
+    .lj-slider-list {
+        width: auto;
+        height: 700px;
+        display: block;
+        list-style: none;
+    }
+
+    .lj-slider-list .lj-portfolio-item {
+        display: block;
+        height: 500px;
+        float: left;
+        margin-top: calc(26vh - 75px);
+    }
+
+    .lj-portfolio-list .lj-portfolio-item {
+        margin-bottom: 100px;
+    }
+
+    .lj-slider-list .lj-portfolio-item-info {
+        width: calc(100% - 75px);
+        display: table;
+        margin-top: 73px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item-info {
+        width: calc(100% - 105px);
+    }
+
+    .lj-slider-list .lj-portfolio-item-info h1 {
+        position: relative;
+        opacity: 0;
+        left: -75px;
+    }
+
+    .lj-portfolio-list {
+        list-style: none;
+    }
+
+    .lj-slider-list .lj-portfolio-item-info p {
+        position: relative;
+        opacity: 0;
+        left: -75px;
+    }
+
+    .lj-slider-list .lj-portfolio-item-info button {
+        position: relative;
+        opacity: 0;
+        left: -75px;
+    }
+
+    .lj-slider-list .lj-portfolio-item-thumb,
+    .lj-portfolio-list .lj-portfolio-item-thumb {
+        width: 100%;
+        display: table;
+        padding: 75px 0 19px 0;
+        position: relative;
+    }
+
+    .lj-slider-list .lj-portfolio-item-thumb>button,
+    .lj-portfolio-list .lj-portfolio-item-thumb>button {
+        margin-top: 17px;
+        float: right;
+        margin-right: 75px;
+    }
+
+    .lj-slider-list .lj-portfolio-item-box,
+    .lj-portfolio-list .lj-portfolio-item-box {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item-box {
+        transform: scaleX(1);
+    }
+
+    .lj-slider-list .lj-portfolio-item-thumb img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -75px;
+        transform: scale(0);
+    }
+
+    .lj-portfolio-list .lj-portfolio-item-thumb img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -75px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item-thumb img {
+        transform: scale(1);
+    }
+
+    /* -----PORTFOLIO----- */
+
+    .lj-section-offset-top {
+        margin-top: 130px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(odd) .lj-portfolio-item-info {
+        text-align: right;
+        margin-top: 70px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(odd) .lj-portfolio-item-info button {
+        float: right;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(even) .lj-portfolio-item-info {
+        margin-left: 105px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(even)>.row {
+        flex-direction: row-reverse;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(even) .lj-portfolio-item-thumb button {
+        float: left;
+        margin-left: 75px;
+    }
+
+    .lj-portfolio-list .lj-portfolio-item:nth-child(even) .lj-portfolio-item-thumb img {
+        left: 75px;
+    }
+
+    /* -----SOBRE----- */
+
+    .lj-page-list {
+        list-style: none;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .lj-page-list>li {
+        font-size: 20px;
+        line-height: 21px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .lj-page-list>li::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        background-color: #2ccb69;
+    }
+
+    /* -------DETALHES------- */
+    .lj-hero {
+        height: 500px;
+        background-image: url('../pages/portfolio/img/hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lj-sobre-hero {
+        width: auto;
+        height: auto;
+        background-color: rgba(0,0,0,0.85);
+        padding: 50px;
+        border-radius: 30px;
+    }
+
+    .lj-project-stats {
+        width: 100%;
+        height: 100%;
+        display: table;
+        border-right: 1px solid #2CCB69;
+    }
+
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+    .lj-menu {
+        display: table;
+        float: left;
+        height: 110px;
+        margin-left: 30px;
+    }
+
+    .lj-menu a {
+        font-family: "Open Sans";
+        font-size: 25px;
+        color: #bcbcbc;
+        text-decoration: none;
+        text-transform: lowercase;
+        display: inline-block;
+        padding: 0 20px;
+        margin: 50px 20px 0 20px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .lj-menu a:first-child {
+        margin-left: 0px;
+    }
+
+    .lj-menu a:hover {
+        color: #2ccb69;
+    }
+
+    .lj-menu a:before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 0px;
+        transition: all 0.2s ease-out;
+        transform: scale(0, 1);
+        transform-origin: center center;
+    }
+
+    .lj-menu a:hover:before {
+        transform: scale(1, 1);
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1364px) {}
+
+@media screen and (min-width: 1600px) {}
+
+/* BOTÕES */
+.lj-btn {
+    display: table;
+    text-align: center;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease-out;
+    text-transform: lowercase;
+    position: relative;
+}
+
+.lj-btn ion-icon {
+    font-size: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+.lj-btn-block {
+    display: block;
+    width: 100%;
+}
+
+.lj-btn-small {
+    line-height: 28px;
+    height: 28px;
+    padding: 0 20px;
+    border-radius: 14px;
+    font-size: 11px;
+}
+
+.lj-btn-medium {
+    line-height: 38px;
+    height: 38px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.lj-btn-large {
+    line-height: 45px;
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.lj-btn-green {
+    background-color: #2ccb69;
+    color: #000;
+}
+
+.lj-btn-green:hover {
+    background-color: rgb(6, 135, 55);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.lj-btn-dark {
+    background-color: #151515;
+    color: #2ccb69;
+}
+
+.lj-btn-dark:hover {
+    background-color: #212121;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* CLASSES UTILITARIAS*/
+
+.lj-title {
+    font-family: 'Abril Fatface', serif;
+    font-weight: normal;
+}
+
+.lj-subtitle {
+    font-family: 'Open Sans', serif;
+    font-weight: 800;
+}
+
+.lj-title-big {
+    font-size: 120px;
+}
+
+.lj-text-small {
+    font-size: 20px;
+}
+
+.lj-text-green {
+    color: #2ccb69;
+}
+
+.lj-text-dark {
+    color: #4d4c4c;
+}
+
+.lj-text-light {
+    color: #bcbcbc;
+}
+
+.lj-text-black {
+    color: #000;
+}
+
+.lj-bg-green {
+    background-color: #2ccb69;
+}
+
+.lj-bg-dark {
+    background-color: #4d4c4c;
+}
+
+.lj-bg-light {
+    background-color: #bcbcbc;
+}
+
+.lj-bg-black {
+    background-color: #000;
+}
+
+.lj-mar-15 {
+    margin: 15px;
+}
+
+.lj-mar-left-15 {
+    margin-left: 15px;
+}
+
+.lj-mar-right-15 {
+    margin-right: 15px;
+}
+
+.lj-mar-top-15 {
+    margin-top: 15px;
+}
+
+.lj-mar-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.lj-mar-30 {
+    margin: 30px;
+}
+
+.lj-mar-left-30 {
+    margin-left: 30px;
+}
+
+.lj-mar-right-30 {
+    margin-right: 30px;
+}
+
+.lj-mar-top-30 {
+    margin-top: 30px;
+}
+
+.lj-mar-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.lj-pad-15 {
+    padding: 15px;
+}
+
+.lj-pad-left-15 {
+    padding-left: 15px;
+}
+
+.lj-pad-right-15 {
+    padding-right: 15px;
+}
+
+.lj-pad-top-15 {
+    padding-top: 15px;
+}
+
+.lj-pad-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.lj-no-padding {
+    padding: 0 !important;
+}
+
+.lj-full-height {
+    height: 100vh;
+    position: relative;
+}
+
+.lj-first-section {
+    height: 100vh;
+}
+
+.lj-img-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* STATE CLASS */
+
+.lj-is-open {
+    display: block;
+}
+
+.lj-slide-top-in {
+    animation: slideTopIn 0.6s forwards cubic-bezier(0, 1.11, 0.6, 0.89);
+}
+
+.lj-change-icon {
+    background-position-y: -45px;
+}
+
+.lj-fade-out {
+    animation: fadeOut 2s forwards ease-out;
+}
+
+.lj-scale-right {
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
+.lj-scale-up {
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
+.lj-fade-from-left-fast {
+    animation: fadeFromLeft 1s 0.4s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
+.lj-fade-from-left-medium {
+    animation: fadeFromLeft 1s 0.7s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
+.lj-fade-from-left-slow {
+    animation: fadeFromLeft 1s 1s forwards cubic-bezier(0, 1.01, .32, 1);
+}

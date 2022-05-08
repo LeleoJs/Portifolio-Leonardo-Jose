@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Oswald:wght@500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/CSS/bootstrap-grid.min.css" />
+    <link rel="stylesheet" type="text/css" href="CSS\main.css" />
+    <title>Leonardo José UX/UI Designer</title>
+</head>
+
+<body>
+
+    <div class="lj-preloader">
+        <div class="lj-preloader-inner">
+            <img src="images\lemon-loader.svg" class="lj-mar-bottom-15">
+            <p class="lj-text-light lj-mar-top-15">Aguarde um pouquinho ..Estou preparandp a limonada</p>
+        </div>
+    </div>
+
+    <div class="lj-overlay lj-toggle-modal"></div>
+
+    <div class="lj-modal lj-bg-black" id="lj-modal-orcamento">
+        <div class="lj-modal-header">
+            <h1 class="lj-title lj-text-green">Solicite seu orçamento</h1>
+            <button class="lj-close-modal lj-toggle-modal"
+                style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">X</button>
+        </div>
+        <div class="lj-modal-body">
+            <div class="row">
+                <div class="col-sm-12"></div>
+                <p class="lj-text-light">Por favor informe os dados abaixo e eu entrarei em contao com você o mais breve
+                    possível </p>
+            </div>
+            <div class="row lj-mar-top-15">
+                <div class="col-sm-12">
+                    <form class="lj-form">
+                        <div class="row lj-mar-bottom-15">
+                            <div class="col-sm-12 col-md-6 lj-mar-bottom-15"">
+                                <label for=" Nome" class="lj-text-light">Nome</label>
+                                <input type="text" name="Nome" id="lj-nome" class="lj-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 lj-mar-bottom-15">
+                                <label for="Email" class="lj-text-light">Email</label>
+                                <input type="email" name="Email" id="lj-email" class="lj-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 lj-mar-bottom-15">
+                                <label for="Telefone" class="lj-text-light">Telefone</label>
+                                <input type="tel" name="Telefone" id="lj-telefone" class="lj-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 lj-mar-bottom-15">
+                                <label for="Site" class="lj-text-light">Site</label>
+                                <input type="text" name="Site" id="lj-site" class="lj-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-12 lj-mar-top-15">
+                                <label for="Mensagem" class="lj-text-light">Descreva abaixo o projeto no qual você
+                                    precisa fazer orçamento</label>
+                                <textarea id="lj-mensagem" name="Mensagem" rows="8" class="lj-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end lj-mar-top-15">
+                            <div class="col-sm-12 col-md-6">
+                                <button class="lj-btn lj-btn-large lj-btn-block lj-btn-green ">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="lj-topbar">
+        <div class="lj-logo">
+            <img src="images\logo.svg" alt="Logo Leonardo José UX/UI Designer">
+        </div>
+        <nav class="lj-menu">
+            <a href="#">Home</a>
+            <a href="pages\portfolio.html">Projetos</a>
+            <a href="pages\sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <div class="lj-contact-info lj-bg-black lj-text-light">
+        <div class="lj-contact-info-inner">
+            <h2 class="lj-title lj-text-green">Contato</h2>
+            <p>leonardo@gmail.com</p>
+            <p>+55 (48)99915-4402</p>
+            <div class="lj-social-links">
+                <a href="#" class="lj-social">
+                    <img src="images/icon-instagram.svg" alt="Instagram">
+                </a>
+                <a href="#" class="lj-social">
+                    <img src="images/icon-twitter.svg" alt="Twitter">
+                </a>
+                <a href="#" class="lj-social">
+                    <img src="images/icon-dribbble.svg" alt="Dribbble">
+                </a>
+            </div>
+        </div>
+        <div class="lj-corner"></div>
+    </div>
+
+    <button class="lj-btn-contact"></button>
+
+    <div class="lj-page-wrapper">
+        <section class="lj-full-height lj-first-section" id="lj-home-presentation">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 offset-md-2 lj-display-text">
+                        <h1 class="lj-title lj-text-green lj-title-big">Olá</h1>
+                        <p class="lj-title lj-text-light"> Texto do perfil do <span
+                                class="lj-text-green">leonardo</span> posteriormente adicionar conteúdo Texto do perfil
+                            do <span class="lj-text-green">leonardo</span> posteriormente adicionar conteúdo Texto do
+                            perfil do <span class="lj-text-green">leonardo</span> posteriormente adicionar conteúdo</p>
+                        <button class="lj-btn lj-btn-medium lj-btn-green lj-mar-top-15 lj-toggle-modal">Solicite seu
+                            orçamento</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lj-scrow-down">
+                <div class="lj-arrow-down">
+                    <img src="images\arrow-down.svg" alt="Role a página">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="lj-full-height" id="lj-home-portfolio">
+            <div class="container-fluid lj-no-padding">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="lj-portfolio-navigator">
+                            <div class="lj-navigator-counter">
+                                <span class="lj-text-green">01</span>
+                            </div>
+                            <nav class="lj-item-navigator">
+                                <a href="#" class="lj-item-active" data-nav="1"></a>
+                                <a href="#" data-nav="2"></a>
+                                <a href="#" data-nav="3"></a>
+                                <a href="#" data-nav="4"></a>
+                                <a href="#" data-nav="5"></a>
+                            </nav>
+                            <div class="lj-items-next-prev">
+                                <div class="lj-item-prev">
+                                    <ion-icon name="arrow-dropleft" style="font-size: 45px;"></ion-icon>
+                                </div>
+                                <div class="lj-items-counter">
+                                    <span class="lj-current-slide">01</span>
+                                    /
+                                    <span class="lj-total-slide">05</span>
+                                </div>
+                                <div class="lj-item-next">
+                                    <ion-icon name="arrow-dropright" style="font-size: 45px;"></ion-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="lj-slider-container lj-full-height">
+                            <ul class="lj-slider-list lj-full-height">
+                                <!-- Tela Startup Rocketz -->
+                                <li class="lj-portfolio-item lj-slide-active" data-slide="1">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="lj-portfolio-item-info lj-text-light">
+                                                <h1 class="lj-title lj-mar-bottom lj-fade-from-left-fast"
+                                                    style="font-size: 45px;">Startup
+                                                    Rocketz</br>Website</h1>
+                                                <p style="margin-bottom: 30px;" class="lj-fade-from-left-medium">UX, UI
+                                                    e Wordpress designer, site
+                                                    developer</p>
+                                                <button class="lj-btn lj-btn-large lj-btn-green lj-fade-from-left-slow"
+                                                    style="margin-left: 10px;">ver projeto</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="lj-portfolio-item-thumb">
+                                                <div class="lj-portfolio-item-box lj-scale-right"></div>
+                                                <img src="images\thumb-1.jpg" alt="Startup Rocketz"
+                                                    title="Startup Rocketz" class="lj-scale-up img-fluid">
+                                                <button class="lj-btn lj-btn-medium lj-btn-dark">visitar site <ion-icon
+                                                        name="share-alt"></ion-icon></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Tela Manage It! Aplicativo -->
+                                <li class="lj-portfolio-item" data-slide="2">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="lj-portfolio-item-info lj-text-light">
+                                                <h1 class="lj-title lj-mar-bottom" style="font-size: 45px;">Manage It!
+                                                    Aplicativo</br>Mobile</h1>
+                                                <p style="margin-bottom: 30px;">UX,UI e Prototipação para aplicativo
+                                                    mobile</p>
+                                                <button class="lj-btn lj-btn-large lj-btn-green"
+                                                    style="margin-left: 10px;">ver projeto</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="lj-portfolio-item-thumb">
+                                                <div class="lj-portfolio-item-box"></div>
+                                                <img src="images\thumb-2.jpg" alt="Manage It" title="Manage It" class="img-fluid">
+                                                <button class="lj-btn lj-btn-medium lj-btn-dark">visitar site <ion-icon
+                                                        name="share-alt"></ion-icon></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Tela Vinyassa -->
+                                <li class="lj-portfolio-item" data-slide="3">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="lj-portfolio-item-info lj-text-light">
+                                                <h1 class="lj-title lj-mar-bottom" style="font-size: 45px;">Vinyassa!
+                                                    Aplicativo</br>Mobile</h1>
+                                                <p style="margin-bottom: 30px;">UX,UI e Prototipação para aplicativo
+                                                    mobile</p>
+                                                <button class="lj-btn lj-btn-large lj-btn-green"
+                                                    style="margin-left: 10px;">ver projeto</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="lj-portfolio-item-thumb">
+                                                <div class="lj-portfolio-item-box"></div>
+                                                <img src="images\thumb-3.jpg" alt="Vinyassa" title="Vinyassa" class="img-fluid">
+                                                <button class="lj-btn lj-btn-medium lj-btn-dark">visitar site <ion-icon
+                                                        name="share-alt"></ion-icon></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Tela Conteúdo é Rei -->
+                                <li class="lj-portfolio-item" data-slide="4">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="lj-portfolio-item-info lj-text-light">
+                                                <h1 class="lj-title lj-mar-bottom" style="font-size: 45px;">Conteúdo é
+                                                    Rei!</br>Website para</br>agência.</h1>
+                                                <p style="margin-bottom: 30px;">Website para agência de conteúdo digital
+                                                </p>
+                                                <button class="lj-btn lj-btn-large lj-btn-green"
+                                                    style="margin-left: 10px;">ver projeto</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="lj-portfolio-item-thumb">
+                                                <div class="lj-portfolio-item-box"></div>
+                                                <img src="images\thumb-4.jpg" alt="Conteúdo é Rei"
+                                                    title="Conteúdo é Rei" class="img-fluid">
+                                                <button class="lj-btn lj-btn-medium lj-btn-dark">visitar site <ion-icon
+                                                        name="share-alt"></ion-icon></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Tela Controle Total -->
+                                <li class="lj-portfolio-item" data-slide="5">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="lj-portfolio-item-info lj-text-light">
+                                                <h1 class="lj-title lj-mar-bottom" style="font-size: 45px;">Controle
+                                                    Total. Web</br>App</h1>
+                                                <p style="margin-bottom: 30px;">UX, UI e Prototipação para aplicativo
+                                                    web.</p>
+                                                <button class="lj-btn lj-btn-large lj-btn-green"
+                                                    style="margin-left: 10px;">ver projeto</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="lj-portfolio-item-thumb">
+                                                <div class="lj-portfolio-item-box"></div>
+                                                <img src="images\thumb-1.jpg" alt="Controle Total"
+                                                    title="Controle Total" class="img-fluid">
+                                                <button class="lj-btn lj-btn-medium lj-btn-dark">visitar site <ion-icon
+                                                        name="share-alt"></ion-icon></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
+    <script src="js\anime.min.js"></script>
+    <script src="js\slider.js"></script>
+    <script src="js\main.js"></script>
+</body>
+
+</html>
